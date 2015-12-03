@@ -7,7 +7,6 @@
 
 #include "approximator.h"
 #include "multiapproximator.h"
-#include "richelbilderbeekprogram.h"
 #include "testtimer.h"
 #include "trace.h"
 
@@ -34,7 +33,7 @@ ribi::About ribi::ToolTestMultiApproximatorMenuDialog::GetAbout() const noexcept
     "Richel Bilderbeek",
     "ToolTestMultiApproximator",
     "tests the MultiApproximator class",
-    "the 23rd of August 2013",
+    "December 3rd of 2015",
     "2013-2015",
     "http://www.richelbilderbeek.nl/ToolTestMultiApproximator.htm",
     GetVersion(),
@@ -59,25 +58,17 @@ ribi::Help ribi::ToolTestMultiApproximatorMenuDialog::GetHelp() const noexcept
   );
 }
 
-boost::shared_ptr<const ribi::Program> ribi::ToolTestMultiApproximatorMenuDialog::GetProgram() const noexcept
-{
-  const boost::shared_ptr<const Program> p {
-    new ProgramTestMultiApproximator
-  };
-  assert(p);
-  return p;
-}
-
 std::string ribi::ToolTestMultiApproximatorMenuDialog::GetVersion() const noexcept
 {
-  return "1.1";
+  return "2.0";
 }
 
 std::vector<std::string> ribi::ToolTestMultiApproximatorMenuDialog::GetVersionHistory() const noexcept
 {
   return {
     "2013-08-23: version 1.0: initial version",
-    "2013-08-23: version 1.1: display conversion from MultiApproximator to Approximator"
+    "2013-08-23: version 1.1: display conversion from MultiApproximator to Approximator",
+    "2015-12-03: version 2.0: moved to own GitHub"
   };
 }
 
